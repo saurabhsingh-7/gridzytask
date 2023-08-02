@@ -20,7 +20,7 @@ body {
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 50px;
 }
 
 .cards {
@@ -65,7 +65,7 @@ body {
 
 .icon {
   display: flex;
-  
+  align-items: center;
 }
 
 .circle {
@@ -76,7 +76,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 10px;}
+  margin-right: 10px;
+}
+
  
 .circle img {
   width: 65px;
@@ -105,45 +107,51 @@ body {
 .orange-text {
   color: #f01414;
 }
-
-.icon {
+.icon-details {
   display: flex;
-  justify-content: space-around;
-
+  align-items: center; 
 }
+.divider {
+  border-left: 1px solid #fff;
+  height: 20px;
+  margin: 0 10px; 
+}
+
+
 ul {
   list-style: none; 
   padding: 0;
 }
 
 ul li {
-  position: relative; 
-  padding-left: 25px; 
-  margin: 5px 0; 
+  position: relative;
+  padding-left: 25px;
+  margin: 5px 0;
+  align-items: center;
 }
 
 ul li::before {
   content: "";
-  position: absolute; 
-  top: 50%; 
-  left: 0; 
-  transform: translateY(-50%); 
-  width: 10px; 
-  height: 10px; 
-  background-color: rgb(240, 20, 20); 
-  border-radius: 50%; 
-  z-index: 1; 
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: rgb(240, 20, 20);
+  border-radius: 50%;
+  z-index: 1;
 }
 
 ul li::after {
-  content: ""; 
-  position: absolute; 
+  content: "";
+  position: absolute;
   top: 50%;
-  left: -2px; 
-  transform: translateY(-50%); 
-  width: 16px; 
-  height: 16px; 
+  left: -2px;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
   border: 2px solid rgb(240, 20, 20);
-  border-radius: 50%; 
-  z-index: 0; 
+  border-radius: 50%;
+  z-index: 0;
 }

@@ -1,0 +1,148 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+.service{
+  background-color: #fff;
+  height: 30px;
+  width: 140px;
+  color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-basis: 35%;
+}
+
+.card {
+  display: flex;
+  justify-content : center;
+  align-items: center;
+  background-color: #000;
+  border-radius: 10px;
+  margin: 10px;
+  flex-direction: column;
+ height: 40%;
+ width: 200px;
+}
+
+.card i {
+  justify-content: center;
+  font-size: 60px;
+  color: #f01414;
+}
+.card h2:hover{
+  justify-content: center;
+  color: #f01414;
+}
+
+.content {
+  flex: 0 0 60%;
+  background-color: #1a1a1a;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.icon {
+  display: flex;
+  
+}
+
+.circle {
+  width: 70px;
+  height: 70px;
+  background-color: #f01414;
+  /* Change to specified color */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;}
+ 
+.circle img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: #f01414;
+}
+
+
+
+.divider {
+  border-left: 1px solid #fff;
+  height: 20px;
+
+}
+
+.more-services-button{
+  background-color: rgb(240, 20, 20);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.orange-text {
+  color: #f01414;
+}
+
+.icon {
+  display: flex;
+  justify-content: space-around;
+
+}
+ul {
+  list-style: none; /* Remove default bullet points */
+  padding: 0; /* Remove default padding */
+}
+
+ul li {
+  position: relative; /* Set the position to relative to allow positioning the pseudo-elements */
+  padding-left: 25px; /* Add padding to the left to make space for the circular border and bullet point */
+  margin: 5px 0; /* Add some margin between list items */
+}
+
+ul li::before {
+  content: ""; /* Add content to the first pseudo-element (bullet point) */
+  position: absolute; /* Position the first pseudo-element */
+  top: 50%; /* Adjust the vertical position of the first pseudo-element */
+  left: 0; /* Position the first pseudo-element to the left of the list item */
+  transform: translateY(-50%); /* Center the first pseudo-element vertically */
+  width: 10px; /* Set the width of the bullet point */
+  height: 10px; /* Set the height of the bullet point */
+  background-color: rgb(240, 20, 20); /* Set the color of the bullet point */
+  border-radius: 50%; /* Set border radius to create a circular bullet point */
+  z-index: 1; /* Ensure the bullet point appears below the circular border */
+}
+
+ul li::after {
+  content: ""; /* Add content to the second pseudo-element (circular border) */
+  position: absolute; /* Position the second pseudo-element */
+  top: 50%; /* Adjust the vertical position of the second pseudo-element */
+  left: -2px; /* Position the second pseudo-element slightly to the left to create the border */
+  transform: translateY(-50%); /* Center the second pseudo-element vertically */
+  width: 16px; /* Set the width of the circular border */
+  height: 16px; /* Set the height of the circular border */
+  border: 2px solid rgb(240, 20, 20); /* Set the color and width of the circular border */
+  border-radius: 50%; /* Set border radius to create a circular border */
+  z-index: 0; /* Ensure the circular border appears behind the bullet point */
+}

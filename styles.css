@@ -37,6 +37,8 @@ body {
   background-color: #000;
   border-radius: 10px;
   margin: 10px;
+
+  text-align: center;
   flex-direction: column;
  height: 40%;
  width: 200px;
@@ -70,7 +72,6 @@ body {
   width: 70px;
   height: 70px;
   background-color: #f01414;
-  /* Change to specified color */
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -111,38 +112,38 @@ body {
 
 }
 ul {
-  list-style: none; /* Remove default bullet points */
-  padding: 0; /* Remove default padding */
+  list-style: none; 
+  padding: 0;
 }
 
 ul li {
-  position: relative; /* Set the position to relative to allow positioning the pseudo-elements */
-  padding-left: 25px; /* Add padding to the left to make space for the circular border and bullet point */
-  margin: 5px 0; /* Add some margin between list items */
+  position: relative; 
+  padding-left: 25px; 
+  margin: 5px 0; 
 }
 
 ul li::before {
-  content: ""; /* Add content to the first pseudo-element (bullet point) */
-  position: absolute; /* Position the first pseudo-element */
-  top: 50%; /* Adjust the vertical position of the first pseudo-element */
-  left: 0; /* Position the first pseudo-element to the left of the list item */
-  transform: translateY(-50%); /* Center the first pseudo-element vertically */
-  width: 10px; /* Set the width of the bullet point */
-  height: 10px; /* Set the height of the bullet point */
-  background-color: rgb(240, 20, 20); /* Set the color of the bullet point */
-  border-radius: 50%; /* Set border radius to create a circular bullet point */
-  z-index: 1; /* Ensure the bullet point appears below the circular border */
+  content: "";
+  position: absolute; 
+  top: 50%; 
+  left: 0; 
+  transform: translateY(-50%); 
+  width: 10px; 
+  height: 10px; 
+  background-color: rgb(240, 20, 20); 
+  border-radius: 50%; 
+  z-index: 1; 
 }
 
 ul li::after {
-  content: ""; /* Add content to the second pseudo-element (circular border) */
-  position: absolute; /* Position the second pseudo-element */
-  top: 50%; /* Adjust the vertical position of the second pseudo-element */
-  left: -2px; /* Position the second pseudo-element slightly to the left to create the border */
-  transform: translateY(-50%); /* Center the second pseudo-element vertically */
-  width: 16px; /* Set the width of the circular border */
-  height: 16px; /* Set the height of the circular border */
-  border: 2px solid rgb(240, 20, 20); /* Set the color and width of the circular border */
-  border-radius: 50%; /* Set border radius to create a circular border */
-  z-index: 0; /* Ensure the circular border appears behind the bullet point */
+  content: ""; 
+  position: absolute; 
+  top: 50%;
+  left: -2px; 
+  transform: translateY(-50%); 
+  width: 16px; 
+  height: 16px; 
+  border: 2px solid rgb(240, 20, 20);
+  border-radius: 50%; 
+  z-index: 0; 
 }

@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.about {
+    padding: 20px;
+    height: 100vh;
+    width: 100%;
+    background: url("https://demo.bosathemes.com/agence/wp-content/uploads/sites/35/2022/11/agency-img3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #252525f8;
+    background-blend-mode: overlay;
+    display: flex;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    width: 1080px;
+    margin: auto;
+}
+.content {
+    color: white;
+    flex: 1;
+}
+.content__tag {
+    background-color: white;
+    width: max-content;
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: gray;
+    font-weight: 600;
+}
+
+.content__tag .circle {
+    width: 10px;
+    height: 10px;
+    background-color: #f94c30;
+    border-radius: 50%;
+}
+
+.title {
+    font-size: 48px;
+    margin-top: 16px;
+}
+.title__red {
+    color: #f94c30;
+}
+.desc {
+    font-size: 15px;
+    line-height: 150%;
+    margin-top: 12px;
+}
+.services {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+    font-size: 15px;
+}
+.service {
+    line-height: 150%;
+    display: flex;
+    align-items: baseline;
+}
+
+.service1::before,
+.service2::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    display: block;
+    margin-right: 20px;
+    outline: 2px solid #f94c30;
+    outline-offset: 2px;
+    flex-shrink: 0;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-right: 1px solid gray;
+    padding-right: 20px;
+    margin-right: 20px;
+}
+.user__photo {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid #f94c30;
+}
+.user__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.user__details {
+}
+.user__name {
+    font-size: 16px;
+    font-weight: 600;
+}
+.user__designation {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 8px;
+}
+.cta {
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background-color: #f94c30;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.cards {
+    display: grid;
+    grid-auto-rows: 200px;
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+    gap: 50px;
+    flex: 1;
+}
+.card {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 120px;
+    background-color: #1d1d1df8;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    z-index: 1;
+}
+.card__icon {
+    font-size: 32px;
+    z-index: 2;
+    color: #f94c30;
+}
+.card__title {
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 600;
+    z-index: 2;
+}

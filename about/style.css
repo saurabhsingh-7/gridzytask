@@ -108,6 +108,7 @@
     overflow: hidden;
     border-radius: 50%;
     border: 3px solid #f94c30;
+    flex-shrink: 0;
 }
 .user__photo img {
     width: 100%;
@@ -177,4 +178,54 @@
     line-height: 150%;
     font-weight: 600;
     z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        height: 100%;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+    .details {
+        flex-direction: column;
+    }
+    .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-right: none;
+        border-bottom: 1px solid gray;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        margin-right: 0;
+        padding-bottom: 30px;
+        margin-bottom: 20px;
+    }
+    .user__photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .cta {
+        padding: 16px 24px;
+        font-size: 18px;
+    }
+
+    .cards {
+        display: grid;
+        grid-auto-rows: 200px;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    .card{
+      padding: 20px 40px;
+    }
 }

@@ -1,0 +1,159 @@
+.container{
+    background-color:black;
+    padding: 30px; 
+}
+.header{
+    display: flex;
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.topleft{
+    font-weight: 5px;
+}
+.btntxt{
+ margin-left: 50px;
+}
+.loginbtn{
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+}
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.boxes{
+    display: flex;
+    justify-content: space-between;
+}
+.box1{
+  background-color: black;
+  margin-top: 50px;
+}
+
+.virtualw{
+    font-size: 80px;
+}
+.content2{
+display: flex;
+margin-top: 20px;
+justify-content: space-around;
+align-items: center;
+color: white;
+}
+.content2btn{
+background-color: white;
+  height: 50px;
+  width: 150px;
+}
+#underline{
+width: 90%;
+height: 2px;
+background-color: aliceblue;
+}
+.join
+{
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-direction: column;
+margin-left: 20px;
+}
+.simplebox{
+margin-top: 70px;
+height: 100px;
+width: 87%;
+display: flex;
+padding: 20px;
+justify-content: end;
+border:1px solid white;
+color: white;
+}
+
+
+.box2{
+    background-color: black;
+    margin-top: 40px;
+}
+.imgbox{
+display: flex;
+justify-content: space-between;
+position: relative;
+}
+.imgbox1 {
+width: 200px;
+height: 300px;
+background-color: beige;
+}
+
+.imgbox2 {
+width: 200px;
+height: 300px;
+margin-left: 10px;
+background-color: orangered;
+position: relative;
+top: -120px;
+right: -30px;
+}
+.detail1{
+display: flex;
+justify-content: space-around;
+}
+.line{
+height: 1px;
+background-color: aliceblue;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+.detail2{
+display: flex;
+justify-content: space-around;
+}
+.detail2c{
+margin-left: 60px;
+margin-right:60px;
+}
+.detail1c{
+margin-left: 60px;
+margin-right:60px;
+}
+
+.content1{
+color: white;
+font-size: 50px;
+}
+.content{
+color: white;
+margin-top: 50px;;
+}
+
+.circle1{
+width: 50px;
+height: 50px;
+background-color: white;
+border-radius: 50%;
+position: relative;
+}
+
+.circle2{
+width: 50px;
+height: 50px;
+background-color: grey;
+border-radius: 50%;
+position: relative;
+right: 20px;
+}
+imgboxcontent{
+    display: flex;
+}
+.circle{
+    
+    display: flex;
+    position: relative;
+    top: -80px;
+    right: -95px;
+}

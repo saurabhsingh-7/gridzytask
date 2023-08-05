@@ -1,7 +1,11 @@
-.container{
-    background-color:black;
-    padding: 30px; 
-}
+
+.container {
+    background-color: black;
+    padding: 30px;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+  }
 .header{
     display: flex;
     background-color: black;
@@ -90,7 +94,16 @@ color: white;
     background-color: orangered;
     position: relative;
     top: -40px;
-    right:100px;
+    right:60px;
+  }
+  .simplebox {
+    margin-top: 70px;
+    width: 100%; /* Adjust this width as needed */
+    display: flex;
+    padding: 20px;
+    justify-content: end;
+    border: 1px solid white;
+    color: white;
   }
 .line8{
     width: 25px;
@@ -200,9 +213,45 @@ imgboxcontent{
     display: flex;
 }
 .circle{
-    
     display: flex;
     position: relative;
     top: -80px;
     right: -95px;
 }
+
+@media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      text-align: center;
+    }
+    .topleft {
+      margin-bottom: 20px;
+    }
+    .btntxt {
+      margin-left: 0;
+      margin-right: 20px;
+    }
+    .login {
+      margin-top: 20px;
+    }
+  }
+  
+
+  @media (min-width: 769px) and (max-width: 992px) {
+    .btntxt {
+      margin-left: 20px;
+    }
+  }
+  
+  @media (min-width: 993px) {
+    .content1 {
+      font-size: 70px;
+    }
+    .virtualw {
+      font-size: 80px;
+    }
+    .hero {
+      font-size: 25px;
+    }
+  }
+  

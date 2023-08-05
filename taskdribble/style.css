@@ -50,6 +50,7 @@
 .virtualw{
     font-size: 100px;
     font-family: 'Barlow Condensed', sans-serif;
+    
 }
 
 .hero{
@@ -236,6 +237,12 @@ imgboxcontent{
     .topleft {
       margin-bottom: 20px;
     }
+    .virtualw{
+        font-size: 80px;
+        font-family: 'Barlow Condensed', sans-serif;
+        
+    }
+    
     .btntxt {
       margin-left: 0;
       margin-right: 20px;

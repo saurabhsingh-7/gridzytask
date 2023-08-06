@@ -1,10 +1,20 @@
-
+* {
+margin: 0;
+padding:0;
+/* box-sizing: border-box; */
+}
+body div{
+  /* border: 1px solid red; */
+}
 .container {
     background-color: black;
     padding: 30px;
-    width: 100%;
-    /* max-width: 1200px; 
-    margin: 0 auto;  */
+    max-width: 1200px; 
+    margin: 0 auto;  
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+   flex-direction: column;
   }
 .header{
     display: flex;
@@ -12,6 +22,7 @@
     justify-content: space-between;
     align-items: center;
     color: white;
+    display: flex;
 }
 .vertualsquare{
     width: 6px;
@@ -28,9 +39,9 @@
  margin-left: 50px;
 }
 .loginbtn{
-    height: 30px;
-    width: 30px;
+    padding: 6px 8px 6px 8px;
     margin-left: 10px;
+    border: none;
 }
 .login{
     display: flex;
@@ -41,6 +52,7 @@
 .boxes{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .box1{
   background-color: black;
@@ -57,10 +69,7 @@
     font-size: 30px;
     font-family: 'Barlow Condensed', sans-serif;
 }
-.upgrade{
-    position: relative;
-    top: -30px;
-}
+
 .content2{
 display: flex;
 margin-top: 20px;
@@ -72,6 +81,7 @@ color: white;
 background-color: white;
   height: 50px;
   width: 150px;
+  border: none;
 }
 #underline{
 width: 90%;
@@ -96,23 +106,22 @@ justify-content: end;
 border:1px solid white;
 color: white;
 }
+.upgrade{
+  position: relative;
+  top: -30px;
+  margin-top: 30px;
+  margin-right: 10px;
+}
 .circlesimp{
     height: 40px;
     width: 40px;
     border-radius: 50%;
     background-color: orangered;
     position: relative;
+    justify-content: center;
+    align-items: center;
     top: -40px;
     right:60px;
-  }
-  .simplebox {
-    margin-top: 70px;
-    width: 100%; /* Adjust this width as needed */
-    display: flex;
-    padding: 20px;
-    justify-content: end;
-    border: 1px solid white;
-    color: white;
   }
 .line8{
     width: 25px;
@@ -132,7 +141,11 @@ color: white;
     background-color: rgb(0, 0, 0);
     rotate: 90deg;
 }
-
+.linecross{
+  position: relative;
+  top:17px;
+  right:-1px
+}
 .box2{
     background-color: black;
     margin-top: 40px;
@@ -155,7 +168,7 @@ margin-left: 10px;
 background-color: orangered;
 position: relative;
 top: -120px;
-right: -30px;
+right: -32px;
 }
 
 
@@ -200,7 +213,7 @@ font-size: 50px;
 }
 .content{
 color: white;
-margin-top: 50px;;
+
 }
 
 .circle1{
@@ -219,55 +232,69 @@ border-radius: 50%;
 position: relative;
 right: 20px;
 }
-imgboxcontent{
-    display: flex;
-}
+
 .circle{
     display: flex;
     position: relative;
     top: -80px;
-    right: -95px;
+    right: -99px;
+    width: 110px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .header {
       flex-direction: column;
       text-align: center;
     }
-    .topleft {
-      margin-bottom: 20px;
-    }
     .virtualw{
         font-size: 80px;
-        font-family: 'Barlow Condensed', sans-serif;
-        
+        font-family: 'Barlow Condensed', sans-serif;  
     }
-    
-    .btntxt {
-      margin-left: 0;
-      margin-right: 20px;
+    .content1{
+      text-align: center;
     }
-    .login {
-      margin-top: 20px;
+    .topleft{
+      margin-bottom: 8px;
+    }
+     .between{
+      margin-bottom: 8px;;
+     }
+    .boxes{
+      display: flex;
+      flex-direction: column;
+    }
+    .box2{
+      margin:top:200px;
+     
+    }
+    .imgbox{
+      margin-top: 120px;
+      display: flex;
+      justify-content: center;
+    }
+    .boxsimp{
+      display: flex;
+      justify-content: center;
     }
   }
-  
-
-  @media (min-width: 769px) and (max-width: 992px) {
-    .btntxt {
-      margin-left: 20px;
+  @media (max-width: 768px)
+  {
+    .imgbox2{
+      right:-5px;
+    }
+    .container{
+      padding:15px;
+    }
+    .circle{
+      right: -75px;
+    }
+    .imgbox{
+      margin-top: 120px;;
     }
   }
-  
-  @media (min-width: 993px) {
-    .content1 {
-      font-size: 70px;
-    }
-    .virtualw {
-      font-size: 100px;
-    }
-    .hero {
-      font-size: 25px;
+  @media (min-width: 300px) and (max-width: 576px) {
+    .container{
+      padding: 5px;
     }
   }
   

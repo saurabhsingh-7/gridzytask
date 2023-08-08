@@ -1,18 +1,48 @@
 import React, { useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import { IoIosArrowDown } from 'react-icons/io';
+import { RiHeartFill, RiComputerLine, RiDashboardFill } from 'react-icons/ri';
 import './AdditionalSidebar.css';
+
+const projectData = {
+  favorites: [
+    { name: 'Goriorio Project', icon: <RiHeartFill /> },
+    { name: 'Conch Project', icon: <RiHeartFill /> },
+    { name: 'Biznet Design', icon: <RiHeartFill /> },
+  ],
+  allProjects: [
+    {
+      name: 'Dribble Shot',
+      icon: <RiComputerLine />,
+    },
+    {
+      name: 'Virgin Project',
+      icon: <RiComputerLine />,
+    },
+    {
+      name: 'Native Project',
+      icon: <RiComputerLine />,
+      childIcons: ['Website Design', 'Dashboard', 'Mobile Responsive'],
+    },
+    {
+      name: 'Brave Wings Project',
+      icon: <RiComputerLine />,
+    },
+    {
+      name: 'Obelix Project',
+      icon: <RiComputerLine />,
+    },
+    {
+      name: 'VPN Design',
+      icon: <RiComputerLine />,
+    },
+  ],
+};
 
 const AdditionalSidebar = () => {
   const [favoriteOpen, setFavoriteOpen] = useState(false);
   const [projectsOpen, setProjectsOpen] = useState(false);
-  const [nativeOpen, setNativeOpen] = useState(false); // New state variable to handle the "Native Project" dropdown
-
-  const favorites = ['Goriorio Project', 'Conch Project', 'Biznet Design'];
-  const allProjects = ['Dribble Shot', 'Virgin Project', 'Native Project', 'Brave Wings Project', 'Obelix Project', 'VPN Design'];
-  const childIcons = {
-    'Native Project': ['Website Design', 'Dashboard', 'Mobile Responsive'],
-  };
+  const [nativeOpen, setNativeOpen] = useState(false);
 
   return (
     <div className="additional-sidebar">
@@ -32,9 +62,10 @@ const AdditionalSidebar = () => {
         </div>
         {favoriteOpen && (
           <div className="dropdown-content">
-            {favorites.map((favorite, index) => (
+            {projectData.favorites.map(({ name, icon }, index) => (
               <div key={index} className="dropdown-item">
-                {favorite}
+                {icon}
+                {name}
               </div>
             ))}
           </div>
@@ -50,12 +81,13 @@ const AdditionalSidebar = () => {
         </div>
         {projectsOpen && (
           <div className="dropdown-content">
-            {allProjects.map((project, index) => (
-              <div key={index} className="dropdown-item" onClick={() => setNativeOpen(project === 'Native Project')}>
-                {project}
-                {project === 'Native Project' && nativeOpen && (
+            {projectData.allProjects.map(({ name, icon, childIcons }, index) => (
+              <div key={index} className="dropdown-item" onClick={() => setNativeOpen(name === 'Native Project')}>
+                {icon}
+                {name}
+                {name === 'Native Project' && nativeOpen && (
                   <div className="child-icons">
-                    {childIcons[project].map((childIcon, childIndex) => (
+                    {childIcons.map((childIcon, childIndex) => (
                       <div key={childIndex} className="child-icon">
                         {childIcon}
                       </div>
@@ -72,3 +104,5 @@ const AdditionalSidebar = () => {
 };
 
 export default AdditionalSidebar;
+
+

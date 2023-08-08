@@ -1,0 +1,37 @@
+
+.work-section {
+    margin-top: 2px;
+    padding: 10px;
+    background-color: rgb(35, 37, 41);
+    color: white;
+  }
+  
+  /* Project title with star icon */
+  .project-title {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+  }
+  
+  .project-title svg {
+    margin-right: 5px;
+  }
+  
+  /* Tabs */
+  .tabs {
+    display: flex;
+  }
+  
+  /* Tab */
+  .tab {
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  .tab:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+  }
+  

@@ -7,7 +7,10 @@
     flex-direction: column;
     align-items: center;
   }
-  
+
+  .icon-container.selected {
+    font-weight: bold;
+  }
   .icon-container {
     width: 40px;
     height: 40px;
@@ -17,8 +20,25 @@
     align-items: center;
     margin: 20px 0;
     color: white;
+    position: relative; 
+    transition: transform 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+  }
+  .icon-container::before {
+    content: '';
+    position: absolute;
+    left: -1px; /* Adjust this to control the position of the white line */
+    bottom: 0;
+    height: 100%;
+    width: 3px;
+    background-color: white;
+    opacity: 0; /* Hide initially */
+    transition: opacity 0.2s ease-in-out;
+    
   }
   
+  .icon-container.selected::before {
+    opacity: 1;
+  }
   
   .child-icon {
     padding-left: 15px;

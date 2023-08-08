@@ -1,4 +1,4 @@
-import React from 'react';
+import React , { useState } from 'react';
 import { MdBugReport } from 'react-icons/md';
 import { RiLayout2Fill } from 'react-icons/ri';
 import { FiMessageCircle } from 'react-icons/fi';
@@ -18,10 +18,18 @@ const icons = [
 ];
 
 const Sidebar = () => {
-    return (
+  const [selectedIconIndex, setSelectedIconIndex] = useState(null);
+  const handleIconClick = (index) => {
+    setSelectedIconIndex(index);
+  };
+  return (
       <div className="sidebar">
         {icons.map(({ icon, title }, index) => (
-          <div key={index} className="icon-container">
+         <div
+         key={index}
+         className={`icon-container ${selectedIconIndex === index ? 'selected' : ''}`}
+         onClick={() => handleIconClick(index)}
+       >
             {icon}
           </div>
         ))}

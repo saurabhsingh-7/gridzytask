@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import { IoIosArrowDown } from 'react-icons/io';
+
+import './AdditionalSidebar.css';
+
 import {
   RiHeartFill,
   RiComputerLine,
@@ -10,7 +13,6 @@ import {
   RiLightbulbFill,
   RiPaintFill,
 } from 'react-icons/ri';
-import './AdditionalSidebar.css';
 
 const colorfulIcons = [
   <RiHeartFill />,
@@ -20,6 +22,16 @@ const colorfulIcons = [
   <RiFlaskFill />,
   <RiLightbulbFill />,
   <RiPaintFill />,
+];
+
+const colorfulIconColors = [
+  'red',
+  'blue',
+  'green',
+  'purple',
+  'orange',
+  'pink',
+  'teal',
 ];
 
 const projectData = {
@@ -49,6 +61,34 @@ const projectData = {
   ],
 };
 
+const DropdownIcon = ({ icon }) => <span className="dropdown-icon">{icon}</span>;
+
+const DropdownItem = ({ item, handleClick, isOpen, setOpen, nativeOpen }) => {
+  const hasChildren = item.childIcons && item.childIcons.length > 0;
+
+  return (
+    <div
+      className={`dropdown-item ${hasChildren && nativeOpen ? 'active' : ''}`}
+      onClick={() => {
+        if (hasChildren) setOpen(!isOpen);
+        handleClick(item.name === 'Native Project');
+      }}
+    >
+      <DropdownIcon icon={item.icon} />
+      {item.name}
+      {hasChildren && isOpen && (
+        <div className="child-icons">
+          {item.childIcons.map((childIcon, index) => (
+            <div key={index} className="child-icon">
+              {childIcon}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
 const AdditionalSidebar = () => {
   const [favoriteOpen, setFavoriteOpen] = useState(false);
   const [projectsOpen, setProjectsOpen] = useState(false);
@@ -72,11 +112,15 @@ const AdditionalSidebar = () => {
         </div>
         {favoriteOpen && (
           <div className="dropdown-content">
-            {projectData.favorites.map(({ name, icon }, index) => (
-              <div key={index} className="dropdown-item">
-               <div style={{ color: `hsl(${index * 60}, 70%, 50%)` }}>{icon}</div>
-                {name}
-              </div>
+            {projectData.favorites.map((item, index) => (
+              <DropdownItem
+                key={index}
+                item={item}
+                handleClick={() => setNativeOpen(false)}
+                isOpen={false}
+                setOpen={setFavoriteOpen}
+                nativeOpen={false}
+              />
             ))}
           </div>
         )}
@@ -91,20 +135,15 @@ const AdditionalSidebar = () => {
         </div>
         {projectsOpen && (
           <div className="dropdown-content">
-            {projectData.allProjects.map(({ name, icon, childIcons }, index) => (
-              <div key={index} className="dropdown-item" onClick={() => setNativeOpen(name === 'Native Project')}>
-                <div style={{ color: `hsl(${index * 60}, 70%, 50%)` }}>{icon}</div>
-                {name}
-                {name === 'Native Project' && nativeOpen && (
-                  <div className="child-icons">
-                    {childIcons.map((childIcon, childIndex) => (
-                      <div key={childIndex} className="child-icon">
-                        {childIcon}
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
+            {projectData.allProjects.map((item, index) => (
+              <DropdownItem
+                key={index}
+                item={item}
+                handleClick={setNativeOpen}
+                isOpen={projectsOpen}
+                setOpen={setProjectsOpen}
+                nativeOpen={nativeOpen}
+              />
             ))}
           </div>
         )}

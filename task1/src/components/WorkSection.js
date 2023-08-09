@@ -6,7 +6,7 @@ const WorkSection = () => {
   return (
     <div className="work-section">
       <div className="project-title">
-        <span>Native Project</span>
+        <span>Home</span>
         <FiStar />
       </div>
       <div className="tabs">

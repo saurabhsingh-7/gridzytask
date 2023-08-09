@@ -54,6 +54,7 @@
 .dropdown-item {
   display: flex;
   align-items: center;
+  gap: 4px;
   padding: 5px;
   color: white;
 }
@@ -66,4 +67,13 @@
 
 .child-icon {
   padding-left: 15px;
+}
+.arrow-icon {
+  color: white;
+  margin-left: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.rotate-up {
+  transform: rotate(-180deg);
 }

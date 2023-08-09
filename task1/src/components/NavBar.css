@@ -3,7 +3,7 @@
     background-color: rgb(35, 37, 41);
     display: flex;
     justify-content: space-between;
-    padding: 14px;
+    padding: 12px;
   }
   
   /* Workspace text */
@@ -21,21 +21,25 @@
 
   .dark-mode-toggle {
     color: white;
-    height: 30px;
+    height: 20px;
     margin-right: 15px;
     margin-left: 15px;
+    cursor: pointer;
   }
   
 
   .bell-icon {
     background-color: rgb(57, 54, 54);
-     
     border-radius: 50%;
-    padding: 10px 5px 5px 10px;
+    width: 35px;
+    height: 35px;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin-right: 15px;
     margin-left: 15px;
+    cursor: pointer;
   }
   
   /* Notification dot */
@@ -53,9 +57,9 @@
     align-items: center;
     justify-content: space-around;
     margin-right: 50px;
+    position: relative;
   }
   
-  /* User image */
   .user-image {
     width: 30px;
     height: 30px;
@@ -65,43 +69,10 @@
     margin-left: 15px;
   }
   
-  /* User name */
   .user-name {
     color: white;
     margin-right: 5px;
   }
-  
-  /* Dropdown */
-  .dropdown {
-    position: relative;
-    
-  }
-  
-  /* Dropdown content */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    right: -80px;
-    top: 100%;
-    background-color: rgb(57, 54, 54);
-    border-radius: 5px;
-    padding: 5px;
-    width: 120px;
-    margin-right: 45px;
-    margin-left: 15px;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  /* Dropdown items */
-  .dropdown-item {
-    color: white;
-    padding: 5px;
-  }
-  
-  /* Vertical line */
   .navbar::before {
     content: '';
     position: absolute;
@@ -112,4 +83,34 @@
     background-color: white;
     transform: translateY(-50%);
   }
+ 
+  .dropdown1.active .dropdown-content1 {
+    position: absolute;
+    display: block;
+    right: -60px;
+    top: 100%;
+    background-color: rgb(57, 54, 54);
+    border-radius: 5px;
+    padding: 5px;
+    width: 120px;
+    margin-right: 45px;
+    margin-left: 15px;
+    z-index: 1;
+  }
+  .dropdown-item1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 5px;
+    color: white;
+  }
+  .arrow-icon1 {
+    color: white;
+    margin-left: 20px;
+    transition: transform 0.2s ease-in-out;
+  }
   
+  .rotate-up {
+    transform: rotate(-180deg);
+  }

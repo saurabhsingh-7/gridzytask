@@ -1,40 +1,50 @@
 import React, { useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import { IoIosArrowDown } from 'react-icons/io';
-import { RiHeartFill, RiComputerLine, RiDashboardFill } from 'react-icons/ri';
+import {
+  RiHeartFill,
+  RiComputerLine,
+  RiDashboardFill,
+  RiCodeFill,
+  RiFlaskFill,
+  RiLightbulbFill,
+  RiPaintFill,
+} from 'react-icons/ri';
 import './AdditionalSidebar.css';
+
+const colorfulIcons = [
+  <RiHeartFill />,
+  <RiComputerLine />,
+  <RiDashboardFill />,
+  <RiCodeFill />,
+  <RiFlaskFill />,
+  <RiLightbulbFill />,
+  <RiPaintFill />,
+];
 
 const projectData = {
   favorites: [
-    { name: 'Goriorio Project', icon: <RiHeartFill /> },
-    { name: 'Conch Project', icon: <RiHeartFill /> },
-    { name: 'Biznet Design', icon: <RiHeartFill /> },
+    { name: 'Goriorio Project', icon: colorfulIcons[0] },
+    { name: 'Conch Project', icon: colorfulIcons[1] },
+    { name: 'Biznet Design', icon: colorfulIcons[2] },
   ],
   allProjects: [
     {
       name: 'Dribble Shot',
-      icon: <RiComputerLine />,
+      icon: colorfulIcons[3],
     },
     {
       name: 'Virgin Project',
-      icon: <RiComputerLine />,
+      icon: colorfulIcons[4],
     },
     {
       name: 'Native Project',
-      icon: <RiComputerLine />,
+      icon: colorfulIcons[5],
       childIcons: ['Website Design', 'Dashboard', 'Mobile Responsive'],
     },
     {
       name: 'Brave Wings Project',
-      icon: <RiComputerLine />,
-    },
-    {
-      name: 'Obelix Project',
-      icon: <RiComputerLine />,
-    },
-    {
-      name: 'VPN Design',
-      icon: <RiComputerLine />,
+      icon: colorfulIcons[6],
     },
   ],
 };
@@ -64,7 +74,7 @@ const AdditionalSidebar = () => {
           <div className="dropdown-content">
             {projectData.favorites.map(({ name, icon }, index) => (
               <div key={index} className="dropdown-item">
-                {icon}
+               <div style={{ color: `hsl(${index * 60}, 70%, 50%)` }}>{icon}</div>
                 {name}
               </div>
             ))}
@@ -83,7 +93,7 @@ const AdditionalSidebar = () => {
           <div className="dropdown-content">
             {projectData.allProjects.map(({ name, icon, childIcons }, index) => (
               <div key={index} className="dropdown-item" onClick={() => setNativeOpen(name === 'Native Project')}>
-                {icon}
+                <div style={{ color: `hsl(${index * 60}, 70%, 50%)` }}>{icon}</div>
                 {name}
                 {name === 'Native Project' && nativeOpen && (
                   <div className="child-icons">
@@ -104,5 +114,3 @@ const AdditionalSidebar = () => {
 };
 
 export default AdditionalSidebar;
-
-

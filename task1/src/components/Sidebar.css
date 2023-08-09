@@ -10,6 +10,7 @@
 
   .icon-container.selected {
     font-weight: bold;
+    transform: scale(1.1);
   }
   .icon-container {
     width: 40px;
@@ -20,20 +21,21 @@
     align-items: center;
     margin: 20px 0;
     color: white;
+    cursor: pointer; 
     position: relative; 
+    transform: scale(1.1);
     transition: transform 0.2s ease-in-out, font-weight 0.2s ease-in-out;
   }
   .icon-container::before {
     content: '';
     position: absolute;
-    left: -1px; /* Adjust this to control the position of the white line */
+    left: -7px; /* Adjust this to control the position of the white line */
     bottom: 0;
     height: 100%;
     width: 3px;
     background-color: white;
     opacity: 0; /* Hide initially */
     transition: opacity 0.2s ease-in-out;
-    
   }
   
   .icon-container.selected::before {
@@ -41,17 +43,9 @@
   }
   
   .child-icon {
-    padding-left: 15px;
+    padding-left: 5px;
   }
   
  
-  .arrow-icon {
-    color: white;
-    margin-left: 5px;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .rotate-up {
-    transform: rotate(-180deg);
-  }
+
   

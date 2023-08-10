@@ -1,41 +1,49 @@
-import React , { useState } from 'react';
-import { MdBugReport } from 'react-icons/md';
-import { RiLayout2Fill } from 'react-icons/ri';
-import { FiMessageCircle } from 'react-icons/fi';
-import { MdMenu, MdNotifications, MdPeople, MdSettings } from 'react-icons/md';
-import { PiMessengerLogoLight } from 'react-icons/pi';
+import React, { useState } from 'react';
 import './Sidebar.css';
-
+import { MdBugReport } from 'react-icons/md';
 const icons = [
-  { icon: <MdBugReport />, title: 'Cockroach' },
-  { icon: <RiLayout2Fill />, title: 'Layout' },
-  { icon: <FiMessageCircle />, title: 'Messenger' },
-  { icon: <MdMenu />, title: 'Hamburger' },
-  { icon: <PiMessengerLogoLight />, title: 'Message' },
-  { icon: <MdNotifications />, title: 'Notification' },
-  { icon: <MdPeople />, title: 'Contact People' },
-  { icon: <MdSettings />, title: 'Settings' },
+  { iconClass: 'icon-dashboard', title: 'Dashboard' },
+  { iconClass: 'icon-statistics', title: 'Statistics' },
+  { iconClass: 'icon-list', title: 'List' },
+  { iconClass: 'icon-chat', title: 'Chat' },
+  { iconClass: 'icon-notifications', title: 'Notifications' },
+  { iconClass: 'icon-user', title: 'User' },
+  { iconClass: 'icon-settings', title: 'Settings' },
 ];
-
 const Sidebar = () => {
-  const [selectedIconIndex, setSelectedIconIndex] = useState(null);
+  const [selectedIconIndex, setSelectedIconIndex] = useState(2);
+
   const handleIconClick = (index) => {
     setSelectedIconIndex(index);
   };
+
   return (
-      <div className="sidebar">
-        {icons.map(({ icon, title }, index) => (
-         <div
-         key={index}
-         className={`icon-container ${selectedIconIndex === index ? 'selected' : ''}`}
-         onClick={() => handleIconClick(index)}
-       >
-            {icon}
-          </div>
-        ))}
+    <div className="sidebar">
+        <div className="cockroach" >
+        <MdBugReport className="bug-icon"/>
+        </div>
+      
+      {icons.map(({ iconClass, title }, index) => (
+        <div
+          key={index}
+          className={`icon-container ${selectedIconIndex === index ? 'selected' : ''} `}
+          onClick={() => handleIconClick(index)}
+        >
+          <span className={iconClass}></span>
+         
+        </div>
+      ))}
+      <div className="bottom-icons">
+        <div className="icon-container">
+          <span className="icon-warning"></span>
+        </div>
+        <div className="icon-container">
+          <span className="icon-logout"></span>
+        </div>
       </div>
-    );
-  };
-  
+
+    </div>
+  );
+};
 
 export default Sidebar;

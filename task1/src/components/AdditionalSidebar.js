@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import { IoIosArrowDown } from 'react-icons/io';
-
 import './AdditionalSidebar.css';
-
 import {
   RiHeartFill,
   RiComputerLine,
@@ -13,57 +11,50 @@ import {
   RiLightbulbFill,
   RiPaintFill,
 } from 'react-icons/ri';
-
 const colorfulIcons = [
-  <RiHeartFill />,
-  <RiComputerLine />,
-  <RiDashboardFill />,
-  <RiCodeFill />,
-  <RiFlaskFill />,
-  <RiLightbulbFill />,
-  <RiPaintFill />,
-];
-
-const colorfulIconColors = [
-  'red',
-  'blue',
-  'green',
-  'purple',
-  'orange',
-  'pink',
-  'teal',
+  { icon: <RiHeartFill />, color: 'red' },
+  { icon: <RiComputerLine />, color: 'blue' },
+  { icon: <RiDashboardFill />, color: 'green' },
+  { icon: <RiCodeFill />, color: 'purple' },
+  { icon: <RiFlaskFill />, color: 'orange' },
+  { icon: <RiLightbulbFill />, color: 'pink' },
+  { icon: <RiPaintFill />, color: 'teal' },
 ];
 
 const projectData = {
   favorites: [
-    { name: 'Goriorio Project', icon: colorfulIcons[0] },
-    { name: 'Conch Project', icon: colorfulIcons[1] },
-    { name: 'Biznet Design', icon: colorfulIcons[2] },
+    { name: 'Goriorio Project', icon: colorfulIcons[0].icon },
+    { name: 'Conch Project', icon: colorfulIcons[1].icon },
+    { name: 'Biznet Design', icon: colorfulIcons[2].icon },
   ],
   allProjects: [
     {
       name: 'Dribble Shot',
-      icon: colorfulIcons[3],
+      icon: colorfulIcons[3].icon,
     },
     {
       name: 'Virgin Project',
-      icon: colorfulIcons[4],
+      icon: colorfulIcons[4].icon,
     },
     {
       name: 'Native Project',
-      icon: colorfulIcons[5],
+      icon: colorfulIcons[5].icon,
       childIcons: ['Website Design', 'Dashboard', 'Mobile Responsive'],
     },
     {
       name: 'Brave Wings Project',
-      icon: colorfulIcons[6],
+      icon: colorfulIcons[6].icon,
     },
   ],
 };
 
-const DropdownIcon = ({ icon }) => <span className="dropdown-icon">{icon}</span>;
+const DropdownIcon = ({ icon, color }) => (
+  <span className="dropdown-icon" style={{ color }}>
+    {icon}
+  </span>
+);
 
-const DropdownItem = ({ item, handleClick, isOpen, setOpen, nativeOpen }) => {
+const DropdownItem = ({ item, handleClick, isOpen, setOpen, nativeOpen, color }) => {
   const hasChildren = item.childIcons && item.childIcons.length > 0;
 
   return (
@@ -74,7 +65,7 @@ const DropdownItem = ({ item, handleClick, isOpen, setOpen, nativeOpen }) => {
         handleClick(item.name === 'Native Project');
       }}
     >
-      <DropdownIcon icon={item.icon} />
+      <DropdownIcon icon={item.icon} color={color} />
       {item.name}
       {hasChildren && isOpen && (
         <div className="child-icons">
@@ -88,7 +79,6 @@ const DropdownItem = ({ item, handleClick, isOpen, setOpen, nativeOpen }) => {
     </div>
   );
 };
-
 const AdditionalSidebar = () => {
   const [favoriteOpen, setFavoriteOpen] = useState(false);
   const [projectsOpen, setProjectsOpen] = useState(false);
@@ -99,8 +89,9 @@ const AdditionalSidebar = () => {
       <div className="search-bar">
         <div className="search-icon">
           <FiSearch />
+          <div className="search-text">Search</div>
         </div>
-        <div className="search-text">Search</div>
+       
       </div>
       <div className="dropdown">
         <div
@@ -120,6 +111,7 @@ const AdditionalSidebar = () => {
                 isOpen={false}
                 setOpen={setFavoriteOpen}
                 nativeOpen={false}
+                color={colorfulIcons[index].color}
               />
             ))}
           </div>
@@ -143,6 +135,7 @@ const AdditionalSidebar = () => {
                 isOpen={projectsOpen}
                 setOpen={setProjectsOpen}
                 nativeOpen={nativeOpen}
+                color={colorfulIcons[index].color}
               />
             ))}
           </div>
@@ -151,5 +144,4 @@ const AdditionalSidebar = () => {
     </div>
   );
 };
-
 export default AdditionalSidebar;

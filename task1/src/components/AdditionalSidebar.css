@@ -13,6 +13,7 @@
   border-radius: 5px;
   background-color: rgb(42,45,51);
   padding: 2px;
+  color: white;
   cursor: pointer; 
 }
 .search-icon{
@@ -33,74 +34,56 @@
   background-color: #282c34;
 }
 
-.dropdown-header {
+.dropdown-title {
+  color: silver;
+  position: relative;
+  margin: 20px;
+  cursor: pointer;
   display: flex;
+  gap: 10px;
   justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  color: white;
-  margin-top: 20px;
-  background-color: rgb(27, 29, 33);
-  padding: 5px;
+  left: -20px;
 }
-.dropdown-icon{
-  display: flex;
+.icon-chevron-up{
+  position: relative;
+  bottom: -4px;
 }
-.search-icon {
-  color: white;
-  margin-right: 5px;
+.icon-chevron-down{
+  position: relative;
+  bottom: -4px;
 }
 
-.search-text {
-  color: white;
-}
 
-.dropdown.active {
-  background-color: rgb(27, 29, 33);
-}
-
-.dropdown-content {
-  display: block;
-}
-
-.dropdown-item {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  padding: 5px;
-  cursor: pointer;
-  color: white;
-}
-
-.child-icons {
-  display: none; 
-  /* flex-direction: column; */
-  /* Remove margin-left and margin-top properties */
-  /* margin-left: 10px; */
-  /* margin-top: 5px; */
-  padding: 5px;
-}
-.dropdown-item.active .child-icons {
-  display: flex; 
+.dropdown-items {
+  margin-top: 10px;
+  /* display: flex;
   flex-direction: column;
+   */
 }
-
-.child-icon {
+.item-icon{
+  display: flex;
+}
+.inner-item{
+  margin-left: 36px;
+}
+.item-label {
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 4px;
+  transition: background-color 0.3s;
   display: flex;
   align-items: center;
   gap: 4px;
-  padding: 5px;
-  color: white;
-}
-
-.arrow-icon {
-  color: white;
+  padding: 0px;
   margin-left: 20px;
-  transition: transform 0.2s ease-in-out;
+  color: silver;
+
 }
 
-.rotate-up {
-  transform: rotate(-180deg);
+.item-label:hover {
+  background-color: rgb(36,39,44);
 }
+
 
 

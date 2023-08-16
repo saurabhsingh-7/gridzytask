@@ -2,9 +2,15 @@
 
 .additional-sidebar {
   background-color: rgb(27, 29, 33);
-  padding: 15px;
+  padding: 15px 0px 15px 15px;
   position: relative;
   margin-left: 1px;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  color: #3d3d4e;
 }
 
 .search-bar {
@@ -14,6 +20,8 @@
   background-color: rgb(42,45,51);
   padding: 2px;
   color: white;
+  margin-right: 15px;
+  margin-top: 7px;
   cursor: pointer; 
 }
 .search-icon{
@@ -22,22 +30,26 @@
   justify-content: center;
   align-items: center;
   gap: 5px;
+  font-size: 13px;
+}
+.icon-search{
+  font-size: 20px;
 }
 
 .search-bar::after {
   content: '';
   position: absolute;
   width: 100%;
-  top: 60px;
+  top: 75px;
   right: 1px;
-  height: 1px;
+  height: 2px;
   background-color: #282c34;
 }
 
 .dropdown-title {
   color: silver;
   position: relative;
-  margin: 20px;
+  margin: 35px 0px 20px 20px;
   cursor: pointer;
   display: flex;
   gap: 10px;
@@ -47,6 +59,10 @@
 .icon-chevron-up{
   position: relative;
   bottom: -4px;
+}
+.icon-chevron-up,
+.icon-chevron-down {
+  margin-left: 50px; /* Add margin between icon and title */
 }
 .icon-chevron-down{
   position: relative;

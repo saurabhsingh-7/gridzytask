@@ -1,87 +1,172 @@
-
 .task-card {
-    padding: 10px;
-    background-color: rgb(35, 37, 41);
-    height: 70%;
-    border: 1px solid  #282c34;
-    padding: 30px;
-    display: flex;
-   justify-content: space-around;
-  }
-  .task-content {
-    padding: 10px;
-  border: 2px solid rgb(42,45,51); 
-   border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    width: 230px;
-  }
-  
-  .task-title {
-    font-size: 16px;
-    margin-bottom: 5px;
-    display: flex;
-    justify-content: space-between;
-    color: white;
-  }
-  .icon-add{
-    font-size: 20px;
-  }
-  .items{
-    border: 2px solid rgb(42,45,51); 
-    border-radius: 5px;
-    padding: 5px 10px 5px 10px;
-    margin-top: 20px;
-    background-color: rgb(27, 29, 33);
-  }
-  .imagecircle1{
-    display: flex;
-  }
-  .plus-icon1{
-    position: relative;
-    right: 17px;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    background-color: #5262F5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .plus-icon1 .icon-add{
-    font-size: 10px;
-  }
-  .date{
-    margin-top: 10px;
-    border: 1px solid rgb(42,45,51);
-    border-radius: 5px;
-     width: 52%
-    
-  }
+  padding: 10px;
+  background-color: rgb(35, 37, 41);
+  border: 1px solid #282c34;
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.task-content {
+  padding: 10px;
+  border: 2px solid rgb(42, 45, 51);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 230px;
+}
+.task-title {
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
 
- 
-  .itemheader{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .uidesign{
-    background-color: #B4D6FF;
+.icon-add {
+  font-size: 20px;
+}
+
+.items {
+  border: 2px solid rgb(42, 45, 51);
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-top: 20px;
+  background-color: rgb(27, 29, 33);
+}
+
+.itemheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* .itemheader .header .category {
+  background-color: #B4D6FF;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 5px;
+  color: black;
+} */
+
+.itemcontent {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading2 {
+  font-size: 14px;
+  margin-top: 10px;
+  color: white;
+}
+
+.heading3 {
+  line-height: 1.2;
+  font-size: 12px;
+  color: silver;
+}
+
+.date {
+  margin-top: 10px;
+  border: 1px solid rgb(42, 45, 51);
+  border-radius: 5px;
+  width: 52%;
+}
+
+.icon-calendar,
+.due {
+  color: silver;
+}
+
+.line6 {
+  width: 112%;
+  margin-top: 20px;
+  height: 2px;
+  position: relative;
+  left: -12px;
+  background-color: #282c34;
+}
+
+.underline {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.iconunder {
+  display: flex;
+}
+
+.comment,
+.clip {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.icon-clip {
+  margin-right: 2px;
+}
+
+.icon-comments {
+  margin-right: 2px;
+  font-size: 20px;
+}
+
+.image1 {
+  border-radius: 5px;
+  object-fit: cover;
+  margin-top: 20px;
+  width: 205px;
+}
+
+.plus-icon1{
+  position: relative;
+  right: 17px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #5262F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagecircle1{
+  display: flex;
+}
+.plus-icon1 .icon-add {
+  font-size: 10px;
+}
+
+.scrollable-content {
+  overflow-y: auto; 
+  overflow-x: auto; 
+  max-height: 400px;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.image1{
+  border-radius: 5px;
+  object-fit: cover;
+  margin-top: 20px;
+  width: 205px;
+}
+.uidesign {
+  background-color: #B4D6FF;
     border-radius: 5px;
     padding: 5px;
     margin-right: 5px;
     color: black;
-  }
-  .research{
-    background-color: #E9FF93;
-    border-radius: 5px;
-    padding: 5px;
-    margin-right: 5px;
-    color: black;
-  }
- .website{
+}
+.research {
+  background-color: #E9FF93;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 5px;
+  color: black;
+}
+.website{
   background-color: #FACFB4;
   border-radius: 5px;
   padding: 5px;
@@ -102,71 +187,8 @@
   margin-right: 5px;
   color:black;
  }
- .heading3{
-  line-height: 90%;
-  color: silver;
-  font-size: 12px;
- }
-  .title{
-  
-  }
-  .icon-title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .itemcontent{
-    display: flex;
-    flex-direction: column;
-  }
-  .image1{
-    border-radius: 5px;
-    object-fit: cover;
-    margin-top: 20px;
-    width: 205px;
-  }
-  .due {
-   color: silver;
-  }
-  .icon-calendar{
-    color: silver;
-  }
-  .line6{
-    width: 112%;
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    height: 2px;
-    position: relative;
-    left:-12px;
-    background-color: #282c34;
-  }
-  .underline{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    align-items: center;
-  }
- .iconunder{
-  display: flex;
- }
- .comment{
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
- }
- .clip{
-  display: flex;
-  align-items: center;
- }
- .icon-clip{
-  margin-right: 2px;
- }
- .icon-comments{
-  margin-right: 2px;
-  font-size: 20px;
- }
-  /* .task-item {
-    padding: 5px;
-  }
-   */
+
+
+
+
+

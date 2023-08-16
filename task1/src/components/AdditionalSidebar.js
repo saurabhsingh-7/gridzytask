@@ -56,7 +56,6 @@ const AdditionalSidebar = () => {
           icon: <RiPaintFill />,
           color: 'teal',
         },
-        // ... other items ...
       ],
     },
   ];
@@ -79,14 +78,15 @@ const AdditionalSidebar = () => {
       </div>
       {data.map((group, index) => (
         <div key={index} className="dropdown">
-          <div className="dropdown-title" onClick={() => handleItemClick(group.title)}>
-            {group.title}
-            {showItems[group.title] ? (
-              <span className="icon-chevron-up"></span>
-            ) : (
-              <span className="icon-chevron-down"></span>
-            )}
-          </div>
+        <div className="dropdown-title" onClick={() => handleItemClick(group.title)}>
+  {group.title}
+  {showItems[group.title] ? (
+    <span className="icon-chevron-up"></span>
+  ) : (
+    <span className="icon-chevron-down"></span>
+  )}
+</div>
+
           {showItems[group.title] && (
             <div className="dropdown-items">
               {group.items.map((item, itemIndex) => (

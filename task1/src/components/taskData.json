@@ -1,0 +1,61 @@
+[
+    {
+      "title": "Upcoming Task",
+      "items": [
+        {
+          "categories": ["UI Design", "Research"],
+          "heading2": "Research Featured Order",
+          "heading3": "An order feature is needed for users when purchases",
+          "dueDate": "14 May",
+          "images": [
+          ],
+          "comments": 2,
+          "clips": 0
+        },
+        {
+          "categories": ["UI Design", "Mobile Apps"],
+          "heading2": "Design System",
+          "heading3": "Making a system design from the dashboard...",
+          "dueDate": "14 May",
+          "images": [
+          
+          ],
+          "comments": 1,
+          "clips": 3
+        }
+      ]
+    },
+    {
+      "title": "Work in Progress",
+      "items": [
+        {
+          "categories": ["UI Design", "Website"],
+          "heading2": "High Fidelity - Website",
+          "heading3": "Make high fidelity based on the style that the client...",
+          "images": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT40F9i4Tuq0eux3sasbgBN0tnYvMFAIKmSmOXzoevpq07G_95h",
+          "comments": 3,
+          "clips": 6
+        }
+      ]
+    },
+    {
+      "title": "Review Task",
+      "items": [
+        {
+          "categories": ["Development", "Mobile Apps"],
+          "heading2": "Research Featured Order",
+          "heading3": "An order feature is needed for users when purchases",
+          "comments": 7,
+          "clips": 3
+        },
+        {
+          "categories": ["UI Design", "Website"],
+          "heading2": "Lardiro V3 - Website",
+          "heading3": "Create a 3rd version of the landing page...",
+          "comments": 2,
+          "clips": 1
+        }
+      ]
+    }
+  ]
+  

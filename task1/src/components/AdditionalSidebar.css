@@ -83,6 +83,7 @@
 }
 .inner-item{
   margin-left: 36px;
+   color: #595B5F;
 }
 .item-label {
   cursor: pointer;
@@ -91,12 +92,13 @@
   margin-top: 4px;
   transition: background-color 0.3s;
   display: flex;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
   align-items: center;
   gap: 4px;
   padding: 0px;
   margin-left: 20px;
-  color: silver;
-
+  color: #5F6166;
+  font-weight: bold;
 }
 
 .item-label:hover {

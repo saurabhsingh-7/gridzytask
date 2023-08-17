@@ -8,6 +8,8 @@ const GlobalStyles = createGlobalStyle`
     font-weight: 400;
     font-size: 14px;
     line-height: 28px;
+    margin:0px;
+    padding:0px;
     overflow: hidden;
     color: #3d3d4e;
   }

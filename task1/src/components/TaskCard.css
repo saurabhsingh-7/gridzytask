@@ -146,7 +146,7 @@
 .scrollable-content {
   overflow-y: auto; 
   overflow-x: auto; 
-  max-height: 375px;
+  max-height: 530px;
   max-width: 1005px;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

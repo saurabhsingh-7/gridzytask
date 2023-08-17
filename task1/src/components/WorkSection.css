@@ -11,6 +11,8 @@
     padding: 10px;
     background-color: rgb(35, 37, 41);
     color: white;
+    width: 985px;
+    height: 88px;
     margin-bottom: 2px;
   }
   
@@ -126,6 +128,10 @@
   align-items: center;
   justify-content: center;
 }
-
-
+.icon-warning{
+  font-size: 20px;
+}
+.icon-star{
+  font-size: 20px;
+}
   

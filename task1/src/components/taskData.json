@@ -56,6 +56,25 @@
           "clips": 1
         }
       ]
-    }
+    },
+    {
+        "title": "Review Task",
+        "items": [
+          {
+            "categories": ["Development", "Mobile Apps"],
+            "heading2": "Research Featured Order",
+            "heading3": "An order feature is needed for users when purchases",
+            "comments": 7,
+            "clips": 3
+          },
+          {
+            "categories": ["UI Design", "Website"],
+            "heading2": "Lardiro V3 - Website",
+            "heading3": "Create a 3rd version of the landing page...",
+            "comments": 2,
+            "clips": 1
+          }
+        ]
+      }
   ]
   

@@ -7,8 +7,6 @@
           "heading2": "Research Featured Order",
           "heading3": "An order feature is needed for users when purchases",
           "dueDate": "14 May",
-          "images": [
-          ],
           "comments": 2,
           "clips": 0
         },
@@ -17,9 +15,6 @@
           "heading2": "Design System",
           "heading3": "Making a system design from the dashboard...",
           "dueDate": "14 May",
-          "images": [
-          
-          ],
           "comments": 1,
           "clips": 3
         }

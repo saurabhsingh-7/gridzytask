@@ -45,7 +45,7 @@ const TaskCard = () => {
               <div className="itemcontent">
                 <div className="heading2">{item.heading2}</div>
                 <div className="heading3">{item.heading3}</div>
-                {taskSection.title === "Work in Progress" && (
+                {item.images && (
                   <img
                   className="image1"
                   src={item.images}

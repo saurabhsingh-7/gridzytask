@@ -57,7 +57,7 @@
   position: relative; 
   padding: 10px 15px;
   cursor: pointer;
-  color: silver;
+  color: #4D4F53;
 }
 
 .tab::before {
@@ -73,6 +73,7 @@
 }
 .tab:hover {
   border-radius: 5px;
+  color: white;
 }
 .circles{
   display: flex;
@@ -130,8 +131,10 @@
 }
 .icon-warning{
   font-size: 20px;
+  color: #4D4F53;
 }
 .icon-star{
   font-size: 20px;
+  color: #4D4F53;
 }
   
